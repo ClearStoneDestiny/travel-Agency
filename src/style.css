@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 90px 20px 100px;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+.header .title {
+  display: flex;
+}
+.header .title img {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header .title h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.header .navigation {
+  min-width: 35%;
+}
+.header .navigation .list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+.header .navigation .list li {
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform ease-in-out 0.4s;
+}
+.header .navigation .list li:hover {
+  transform: translateY(-5px);
+  border-bottom: 1px solid #2F80ED;
+}
+.header .buttons button {
+  border: 1px solid #2F80ED;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header .buttons .left {
+  color: #2F80ED;
+  background-color: transparent;
+  transform: translateY(0);
+  transition: transform ease-in-out 0.4s;
+}
+.header .buttons .left:hover {
+  transform: translateY(-5px);
+}
+.header .buttons .right {
+  background-color: #2F80ED;
+  color: #fff;
+  transform: translateY(0);
+  transition: transform ease-in-out 0.4s;
+}
+.header .buttons .right:hover {
+  transform: translateY(-5px);
+}
+
+.main {
+  grid-area: main;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.main .banner-section {
+  position: relative;
+}
+.main .banner-section .banner {
+  text-align: center;
+  color: #fff;
+}
+.main .banner-section .banner figcaption {
+  position: absolute;
+  left: 315px;
+  top: 190px;
+}
+.main .banner-section .banner figcaption h2 {
+  font-size: 32px;
+}
+.main .banner-section .banner figcaption p {
+  padding-top: 10px;
+  letter-spacing: 1px;
+}
+.main .banner-section .search-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  left: 150px;
+  bottom: -32px;
+  box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.15);
+}
+.main .banner-section .search-panel .item {
+  background-color: #F2F2F2;
+  color: #4F4F4F;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 12px 12px;
+  margin-right: 12px;
+  display: flex;
+  cursor: pointer;
+  scale: 1;
+  transition: scale 0.4s;
+}
+.main .banner-section .search-panel .item:hover {
+  scale: 1.05;
+}
+.main .banner-section .search-panel .item img {
+  padding-right: 10px;
+}
+.main .banner-section .search-panel button {
+  padding: 12px 46.5px;
+  background-color: #2F80ED;
+  color: #fff;
+  border: 1px solid #2F80ED;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.4s;
+}
+.main .banner-section .search-panel button:hover {
+  background-color: transparent;
+  color: #2F80ED;
+}
+.main .countries-section {
+  padding-top: 100px;
+}
+.main .countries-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.main .countries-section p {
+  padding: 16px 0 30px;
+  color: #333333;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.main .countries-section .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.main .countries-section .gallery figure img {
+  transition: scale ease 0.5s;
+  scale: 1;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main .countries-section .gallery figure img:hover {
+  scale: 1.03;
+}
+.main .countries-section .gallery figcaption h3 {
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.5s ease;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+.main .countries-section .gallery figcaption h3:hover {
+  background-color: #2F80ED;
+}
+.main .countries-section .gallery figcaption p {
+  letter-spacing: 1px;
+  padding: 0;
+}
+.main .topics-section {
+  padding-top: 50px;
+}
+.main .topics-section .topics-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.main .topics-section .topics-gallery .figure {
+  position: relative;
+  transition: scale ease 0.5s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main .topics-section .topics-gallery .figure:hover {
+  scale: 1.03;
+}
+.main .topics-section .topics-gallery .figure figcaption {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 20px;
+}
+.main .topics-section .topics-gallery .figure figcaption h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.main .topics-section .topics-gallery .figure figcaption p {
+  font-size: 16px;
+}
+.main .hotels-section {
+  padding-top: 60px;
+  padding-bottom: 24px;
+}
+.main .hotels-section .hotels-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.main .hotels-section .hotels-gallery .figure img {
+  transition: scale ease 0.4s;
+  cursor: pointer;
+}
+.main .hotels-section .hotels-gallery .figure img:hover {
+  scale: 1.03;
+}
+.main .hotels-section .hotels-gallery .figure h3 {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
+  transition: background-color ease 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main .hotels-section .hotels-gallery .figure h3:hover {
+  background-color: #378711;
+}
+.main .hotels-section .hotels-gallery .figure p {
+  letter-spacing: 1px;
+}
+.main .commercial-section {
+  padding-top: 50px;
+}
+.main .commercial-section .figure {
+  position: relative;
+}
+.main .commercial-section .figure figcaption {
+  position: absolute;
+  left: 70px;
+  top: 65px;
+  color: #fff;
+}
+.main .commercial-section .figure figcaption h2 {
+  padding-bottom: 30px;
+  font-weight: 600;
+  font-size: 28px;
+}
+.main .commercial-section .figure figcaption button {
+  background-color: #2F80ED;
+  border: 1px solid #2F80ED;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 6px;
+  color: #fff;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+.main .commercial-section .figure figcaption button:hover {
+  background-color: transparent;
+}
+.main .commercial-section .figure .banner-img {
+  position: relative;
+}
+.main .commercial-section .figure .banner-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+.main .commercial-section .figure .hand {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main .explore-section {
+  padding-top: 80px;
+}
+.main .explore-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+.main .explore-section h4 {
+  padding-top: 16px;
+  color: #2F80ED;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.4s ease;
+  transform: translateY(0);
+}
+.main .explore-section h4:hover {
+  transform: translateY(-5px);
+}
+.main .explore-section .items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding-top: 80px;
+  gap: 20px;
+}
+.main .explore-section .items-container figure {
+  display: flex;
+}
+.main .explore-section .items-container figure h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .explore-section .items-container .item {
+  padding-bottom: 60px;
+}
+.main .explore-section .items-container .item #figure-text {
+  padding-top: 0;
+  padding-left: 28px;
+}
+.main .explore-section .items-container .item:nth-child(2) {
+  padding-left: 60px;
+}
+.main .explore-section .items-container .item:nth-child(3) {
+  padding-left: 30px;
+}
+.main .explore-section .items-container .item:nth-child(4) {
+  padding-left: 20px;
+}
+.main .explore-section .items-container .item .title {
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main .explore-section .items-container .item p {
+  color: #4F4F4F;
+  font-size: 14px;
+  padding-bottom: 8px;
+  transition: background-color 0.4s ease;
+  transition: color 0.4s ease;
+  cursor: pointer;
+}
+.main .explore-section .items-container .item p:hover {
+  background-color: #2F80ED;
+  color: #fff;
+}
+.main .explore-section .items-container .item p:hover span {
+  color: #fff;
+}
+.main .explore-section .items-container .item p span {
+  color: #2F80ED;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #EBEBEB;
+  padding: 10px 0;
+  color: #4F4F4F;
+}
+.footer figure {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 205px;
+}
+.footer figure img {
+  padding-right: 5px;
+}
+.footer figure figcaption {
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
